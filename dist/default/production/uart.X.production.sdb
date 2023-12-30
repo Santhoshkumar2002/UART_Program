@@ -1,0 +1,122 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4580 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"14 C:\Users\santh\MPLABXProjects\uart.X\main.c
+[v _init_config init_config `(v  1 e 1 0 ]
+"35
+[v _main main `(v  1 e 1 0 ]
+"12 C:\Users\santh\MPLABXProjects\uart.X\uart.c
+[v _init_uart init_uart `(v  1 e 1 0 ]
+"42
+[v _putch putch `(v  1 e 1 0 ]
+"49
+[v _puts puts `(v  1 e 1 0 ]
+"57
+[v _getch getch `(uc  1 e 1 0 ]
+"64
+[v _getche getche `(uc  1 e 1 0 ]
+"29245 C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"29257
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"29269
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"34752
+[v _BRG16 BRG16 `VEb  1 e 0 @32195 ]
+"34755
+[v _BRGH BRGH `VEb  1 e 0 @32098 ]
+"34914
+[v _CREN CREN `VEb  1 e 0 @32092 ]
+"36276
+[v _RCIE RCIE `VEb  1 e 0 @31981 ]
+"36279
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
+"36372
+[v _RX9 RX9 `VEb  1 e 0 @32094 ]
+"38859
+[v _SENDB SENDB `VEb  1 e 0 @32099 ]
+"38880
+[v _SPEN SPEN `VEb  1 e 0 @32095 ]
+"38958
+[v _SYNC SYNC `VEb  1 e 0 @32100 ]
+"39216
+[v _TRISC6 TRISC6 `VEb  1 e 0 @31910 ]
+"39219
+[v _TRISC7 TRISC7 `VEb  1 e 0 @31911 ]
+"39303
+[v _TX9 TX9 `VEb  1 e 0 @32102 ]
+"40326
+[v _TXEN TXEN `VEb  1 e 0 @32101 ]
+"40332
+[v _TXIE TXIE `VEb  1 e 0 @31980 ]
+"40335
+[v _TXIF TXIF `VEb  1 e 0 @31988 ]
+"13 C:\Users\santh\MPLABXProjects\uart.X\main.c
+[v _text text `[563]uc  1 e 563 0 ]
+"35
+[v _main main `(v  1 e 1 0 ]
+{
+"44
+} 0
+"14
+[v _init_config init_config `(v  1 e 1 0 ]
+{
+"34
+} 0
+"49 C:\Users\santh\MPLABXProjects\uart.X\uart.c
+[v _puts puts `(v  1 e 1 0 ]
+{
+[v puts@data data `*.35uc  1 p 2 1 ]
+"55
+} 0
+"12
+[v _init_uart init_uart `(v  1 e 1 0 ]
+{
+"40
+} 0
+"57
+[v _getch getch `(uc  1 e 1 0 ]
+{
+"62
+} 0
+"64
+[v _getche getche `(uc  1 e 1 0 ]
+{
+"66
+[v getche@ch ch `uc  1 a 1 1 ]
+"71
+} 0
+"42
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 0 ]
+"47
+} 0
