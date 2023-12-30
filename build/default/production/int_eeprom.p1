@@ -1,17 +1,34 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"15 ./uart.h
-[; ;./uart.h: 15: void init_uart();
-[v _init_uart `(v ~T0 @X0 0 e? ]
-"12
-[; ;./uart.h: 12: void write_internal_eeprom(unsigned char data, unsigned char addr);
-[v _write_internal_eeprom `(v ~T0 @X0 0 ef2`uc`uc ]
-"11
-[; ;./uart.h: 11: unsigned char read_internal_eeprom(unsigned char addr);
-[v _read_internal_eeprom `(uc ~T0 @X0 0 ef1`uc ]
-"16
-[; ;./uart.h: 16: void putch(unsigned char data);
-[v _putch `(v ~T0 @X0 0 ef1`uc ]
+"28772 C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 28772: extern volatile unsigned char EEADR __attribute__((address(0xFA9)));
+[v _EEADR `Vuc ~T0 @X0 0 e@4009 ]
+"35064
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 35064: extern volatile __bit EEPGD __attribute__((address(0x7D37)));
+[v _EEPGD `Vb ~T0 @X0 0 e@32055 ]
+"34851
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 34851: extern volatile __bit CFGS __attribute__((address(0x7D36)));
+[v _CFGS `Vb ~T0 @X0 0 e@32054 ]
+"40410
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 40410: extern volatile __bit WREN __attribute__((address(0x7D32)));
+[v _WREN `Vb ~T0 @X0 0 e@32050 ]
+"36285
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 36285: extern volatile __bit RD __attribute__((address(0x7D30)));
+[v _RD `Vb ~T0 @X0 0 e@32048 ]
+"28765
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 28765: extern volatile unsigned char EEDATA __attribute__((address(0xFA8)));
+[v _EEDATA `Vuc ~T0 @X0 0 e@4008 ]
+"35487
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 35487: extern volatile __bit GIE __attribute__((address(0x7F97)));
+[v _GIE `Vb ~T0 @X0 0 e@32663 ]
+"28758
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 28758: extern volatile unsigned char EECON2 __attribute__((address(0xFA7)));
+[v _EECON2 `Vuc ~T0 @X0 0 e@4007 ]
+"40404
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 40404: extern volatile __bit WR __attribute__((address(0x7D31)));
+[v _WR `Vb ~T0 @X0 0 e@32049 ]
+"35058
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 35058: extern volatile __bit EEIF __attribute__((address(0x7D0C)));
+[v _EEIF `Vb ~T0 @X0 0 e@32012 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 54: __asm("RXF6SIDH equ 0D60h");
 [; <" RXF6SIDH equ 0D60h ;# ">
@@ -1251,661 +1268,97 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32464
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4580.h: 32464: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"13 main.c
-[; ;main.c: 13: char text[] = "Finance Minister Arun Jaitley Tuesday hit out at former RBI governor Raghuram Rajan for predicting that the next banking crisis would be triggered by MSME lending, saying postmortem is easier than taking action when it was required. Rajan, who had as the chief economist at IMF warned of impending financial crisis of 2008, in a note to a parliamentary committee warned against ambitious credit targets and loan waivers, saying that they could be the sources of next banking crisis. Government should focus on sources of the next crisis, not just the last one.\n\r";
-[v _text `uc ~T0 @X0 -> 563 `i e ]
-[i _text
-:U ..
--> 70 `c
--> 105 `c
--> 110 `c
--> 97 `c
--> 110 `c
--> 99 `c
--> 101 `c
--> 32 `c
--> 77 `c
--> 105 `c
--> 110 `c
--> 105 `c
--> 115 `c
--> 116 `c
--> 101 `c
--> 114 `c
--> 32 `c
--> 65 `c
--> 114 `c
--> 117 `c
--> 110 `c
--> 32 `c
--> 74 `c
--> 97 `c
--> 105 `c
--> 116 `c
--> 108 `c
--> 101 `c
--> 121 `c
--> 32 `c
--> 84 `c
--> 117 `c
--> 101 `c
--> 115 `c
--> 100 `c
--> 97 `c
--> 121 `c
--> 32 `c
--> 104 `c
--> 105 `c
--> 116 `c
--> 32 `c
--> 111 `c
--> 117 `c
--> 116 `c
--> 32 `c
--> 97 `c
--> 116 `c
--> 32 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 109 `c
--> 101 `c
--> 114 `c
--> 32 `c
--> 82 `c
--> 66 `c
--> 73 `c
--> 32 `c
--> 103 `c
--> 111 `c
--> 118 `c
--> 101 `c
--> 114 `c
--> 110 `c
--> 111 `c
--> 114 `c
--> 32 `c
--> 82 `c
--> 97 `c
--> 103 `c
--> 104 `c
--> 117 `c
--> 114 `c
--> 97 `c
--> 109 `c
--> 32 `c
--> 82 `c
--> 97 `c
--> 106 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 32 `c
--> 112 `c
--> 114 `c
--> 101 `c
--> 100 `c
--> 105 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 97 `c
--> 116 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 101 `c
--> 32 `c
--> 110 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 32 `c
--> 98 `c
--> 97 `c
--> 110 `c
--> 107 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 115 `c
--> 105 `c
--> 115 `c
--> 32 `c
--> 119 `c
--> 111 `c
--> 117 `c
--> 108 `c
--> 100 `c
--> 32 `c
--> 98 `c
--> 101 `c
--> 32 `c
--> 116 `c
--> 114 `c
--> 105 `c
--> 103 `c
--> 103 `c
--> 101 `c
--> 114 `c
--> 101 `c
--> 100 `c
--> 32 `c
--> 98 `c
--> 121 `c
--> 32 `c
--> 77 `c
--> 83 `c
--> 77 `c
--> 69 `c
--> 32 `c
--> 108 `c
--> 101 `c
--> 110 `c
--> 100 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 44 `c
--> 32 `c
--> 115 `c
--> 97 `c
--> 121 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 112 `c
--> 111 `c
--> 115 `c
--> 116 `c
--> 109 `c
--> 111 `c
--> 114 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 32 `c
--> 105 `c
--> 115 `c
--> 32 `c
--> 101 `c
--> 97 `c
--> 115 `c
--> 105 `c
--> 101 `c
--> 114 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 116 `c
--> 97 `c
--> 107 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 32 `c
--> 119 `c
--> 104 `c
--> 101 `c
--> 110 `c
--> 32 `c
--> 105 `c
--> 116 `c
--> 32 `c
--> 119 `c
--> 97 `c
--> 115 `c
--> 32 `c
--> 114 `c
--> 101 `c
--> 113 `c
--> 117 `c
--> 105 `c
--> 114 `c
--> 101 `c
--> 100 `c
--> 46 `c
--> 32 `c
--> 82 `c
--> 97 `c
--> 106 `c
--> 97 `c
--> 110 `c
--> 44 `c
--> 32 `c
--> 119 `c
--> 104 `c
--> 111 `c
--> 32 `c
--> 104 `c
--> 97 `c
--> 100 `c
--> 32 `c
--> 97 `c
--> 115 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 101 `c
--> 32 `c
--> 99 `c
--> 104 `c
--> 105 `c
--> 101 `c
--> 102 `c
--> 32 `c
--> 101 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 111 `c
--> 109 `c
--> 105 `c
--> 115 `c
--> 116 `c
--> 32 `c
--> 97 `c
--> 116 `c
--> 32 `c
--> 73 `c
--> 77 `c
--> 70 `c
--> 32 `c
--> 119 `c
--> 97 `c
--> 114 `c
--> 110 `c
--> 101 `c
--> 100 `c
--> 32 `c
--> 111 `c
--> 102 `c
--> 32 `c
--> 105 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 110 `c
--> 100 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 102 `c
--> 105 `c
--> 110 `c
--> 97 `c
--> 110 `c
--> 99 `c
--> 105 `c
--> 97 `c
--> 108 `c
--> 32 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 115 `c
--> 105 `c
--> 115 `c
--> 32 `c
--> 111 `c
--> 102 `c
--> 32 `c
--> 50 `c
--> 48 `c
--> 48 `c
--> 56 `c
--> 44 `c
--> 32 `c
--> 105 `c
--> 110 `c
--> 32 `c
--> 97 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 116 `c
--> 101 `c
--> 32 `c
--> 116 `c
--> 111 `c
--> 32 `c
--> 97 `c
--> 32 `c
--> 112 `c
--> 97 `c
--> 114 `c
--> 108 `c
--> 105 `c
--> 97 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 97 `c
--> 114 `c
--> 121 `c
--> 32 `c
--> 99 `c
--> 111 `c
--> 109 `c
--> 109 `c
--> 105 `c
--> 116 `c
--> 116 `c
--> 101 `c
--> 101 `c
--> 32 `c
--> 119 `c
--> 97 `c
--> 114 `c
--> 110 `c
--> 101 `c
--> 100 `c
--> 32 `c
--> 97 `c
--> 103 `c
--> 97 `c
--> 105 `c
--> 110 `c
--> 115 `c
--> 116 `c
--> 32 `c
--> 97 `c
--> 109 `c
--> 98 `c
--> 105 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 117 `c
--> 115 `c
--> 32 `c
--> 99 `c
--> 114 `c
--> 101 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 32 `c
--> 116 `c
--> 97 `c
--> 114 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 115 `c
--> 32 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 32 `c
--> 108 `c
--> 111 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 119 `c
--> 97 `c
--> 105 `c
--> 118 `c
--> 101 `c
--> 114 `c
--> 115 `c
--> 44 `c
--> 32 `c
--> 115 `c
--> 97 `c
--> 121 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 97 `c
--> 116 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 101 `c
--> 121 `c
--> 32 `c
--> 99 `c
--> 111 `c
--> 117 `c
--> 108 `c
--> 100 `c
--> 32 `c
--> 98 `c
--> 101 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 101 `c
--> 32 `c
--> 115 `c
--> 111 `c
--> 117 `c
--> 114 `c
--> 99 `c
--> 101 `c
--> 115 `c
--> 32 `c
--> 111 `c
--> 102 `c
--> 32 `c
--> 110 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 32 `c
--> 98 `c
--> 97 `c
--> 110 `c
--> 107 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 32 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 115 `c
--> 105 `c
--> 115 `c
--> 46 `c
--> 32 `c
--> 71 `c
--> 111 `c
--> 118 `c
--> 101 `c
--> 114 `c
--> 110 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 32 `c
--> 115 `c
--> 104 `c
--> 111 `c
--> 117 `c
--> 108 `c
--> 100 `c
--> 32 `c
--> 102 `c
--> 111 `c
--> 99 `c
--> 117 `c
--> 115 `c
--> 32 `c
--> 111 `c
--> 110 `c
--> 32 `c
--> 115 `c
--> 111 `c
--> 117 `c
--> 114 `c
--> 99 `c
--> 101 `c
--> 115 `c
--> 32 `c
--> 111 `c
--> 102 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 101 `c
--> 32 `c
--> 110 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 32 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 115 `c
--> 105 `c
--> 115 `c
--> 44 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 116 `c
--> 32 `c
--> 106 `c
--> 117 `c
--> 115 `c
--> 116 `c
--> 32 `c
--> 116 `c
--> 104 `c
--> 101 `c
--> 32 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 116 `c
--> 32 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 46 `c
--> 10 `c
--> 13 `c
--> 0 `c
-..
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"15
-[; ;main.c: 15: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"11 int_eeprom.c
+[; ;int_eeprom.c: 11: unsigned char read_internal_eeprom(unsigned char addr)
+[v _read_internal_eeprom `(uc ~T0 @X0 1 ef1`uc ]
+"12
+[; ;int_eeprom.c: 12: {
 {
-[e :U _main ]
+[e :U _read_internal_eeprom ]
+"11
+[; ;int_eeprom.c: 11: unsigned char read_internal_eeprom(unsigned char addr)
+[v _addr `uc ~T0 @X0 1 r1 ]
+"12
+[; ;int_eeprom.c: 12: {
 [f ]
+"13
+[; ;int_eeprom.c: 13:     EEADR = addr;
+[e = _EEADR _addr ]
+"14
+[; ;int_eeprom.c: 14:     EEPGD = 0;
+[e = _EEPGD -> -> 0 `i `b ]
+"15
+[; ;int_eeprom.c: 15:     CFGS = 0;
+[e = _CFGS -> -> 0 `i `b ]
 "16
-[; ;main.c: 16:     init_uart();
-[e ( _init_uart ..  ]
+[; ;int_eeprom.c: 16:     WREN = 0;
+[e = _WREN -> -> 0 `i `b ]
+"17
+[; ;int_eeprom.c: 17:     RD = 1;
+[e = _RD -> -> 1 `i `b ]
 "18
-[; ;main.c: 18:     unsigned int start_time, end_time, time_taken;
-[v _start_time `ui ~T0 @X0 1 a ]
-[v _end_time `ui ~T0 @X0 1 a ]
-[v _time_taken `ui ~T0 @X0 1 a ]
-"19
-[; ;main.c: 19:     unsigned long int total_bits_transmitted = 0;
-[v _total_bits_transmitted `ul ~T0 @X0 1 a ]
-[e = _total_bits_transmitted -> -> -> 0 `i `l `ul ]
-"20
-[; ;main.c: 20:     unsigned char data;
-[v _data `uc ~T0 @X0 1 a ]
-"21
-[; ;main.c: 21:     for (int i = 0; i < 1000; ++i) {
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 1000 `i 1089  ]
-[e $U 1090  ]
-[e :U 1089 ]
-{
-"23
-[; ;main.c: 23:         write_internal_eeprom(text[i], 0x00+i);
-[e ( _write_internal_eeprom (2 , -> *U + &U _text * -> -> _i `ui `ux -> -> # *U &U _text `ui `ux `uc -> + -> 0 `i _i `uc ]
-"25
-[; ;main.c: 25:     }
-}
-[e =+ _i -> 1 `i ]
-[e $ < _i -> 1000 `i 1089  ]
-[e :U 1090 ]
-}
-"29
-[; ;main.c: 29:     for(int i = 0; i < 1000; i++)
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 1000 `i 1092  ]
-[e $U 1093  ]
-[e :U 1092 ]
-"30
-[; ;main.c: 30:     {
-{
-"31
-[; ;main.c: 31:         data = read_internal_eeprom(0x00+i);
-[e = _data ( _read_internal_eeprom (1 -> + -> 0 `i _i `uc ]
-"32
-[; ;main.c: 32:         putch(data);
-[e ( _putch (1 _data ]
-"33
-[; ;main.c: 33:         total_bits_transmitted += 8;
-[e =+ _total_bits_transmitted -> -> -> 8 `i `l `ul ]
-"34
-[; ;main.c: 34:     }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 1000 `i 1092  ]
-[e :U 1093 ]
-}
-"40
-[; ;main.c: 40:     time_taken = end_time - start_time;
-[e = _time_taken - _end_time _start_time ]
-"43
-[; ;main.c: 43:     float speed_bps = (float)total_bits_transmitted / (float)time_taken * (8000000/ 1000000);
-[v _speed_bps `f ~T0 @X0 1 a ]
-[e = _speed_bps * / -> _total_bits_transmitted `f -> _time_taken `f -> / -> 8000000 `l -> 1000000 `l `f ]
-"45
-[; ;main.c: 45:     while(1);
-[e :U 1096 ]
-[e :U 1095 ]
-[e $U 1096  ]
-[e :U 1097 ]
-"46
-[; ;main.c: 46:     return;
+[; ;int_eeprom.c: 18:     return EEDATA;
+[e ) _EEDATA ]
 [e $UE 1088  ]
-"47
-[; ;main.c: 47: }
+"19
+[; ;int_eeprom.c: 19: }
 [e :UE 1088 ]
+}
+"21
+[; ;int_eeprom.c: 21: void write_internal_eeprom(unsigned char data, unsigned char addr)
+[v _write_internal_eeprom `(v ~T0 @X0 1 ef2`uc`uc ]
+"22
+[; ;int_eeprom.c: 22: {
+{
+[e :U _write_internal_eeprom ]
+"21
+[; ;int_eeprom.c: 21: void write_internal_eeprom(unsigned char data, unsigned char addr)
+[v _data `uc ~T0 @X0 1 r1 ]
+[v _addr `uc ~T0 @X0 1 r2 ]
+"22
+[; ;int_eeprom.c: 22: {
+[f ]
+"23
+[; ;int_eeprom.c: 23:     EEADR = addr;
+[e = _EEADR _addr ]
+"24
+[; ;int_eeprom.c: 24:     EEDATA = data;
+[e = _EEDATA _data ]
+"25
+[; ;int_eeprom.c: 25:     EEPGD = 0;
+[e = _EEPGD -> -> 0 `i `b ]
+"26
+[; ;int_eeprom.c: 26:     CFGS = 0;
+[e = _CFGS -> -> 0 `i `b ]
+"27
+[; ;int_eeprom.c: 27:     WREN = 1;
+[e = _WREN -> -> 1 `i `b ]
+"29
+[; ;int_eeprom.c: 29:     GIE = 0;
+[e = _GIE -> -> 0 `i `b ]
+"30
+[; ;int_eeprom.c: 30:     EECON2 = 0X55;
+[e = _EECON2 -> -> 85 `i `uc ]
+"31
+[; ;int_eeprom.c: 31:     EECON2 = 0XAA;
+[e = _EECON2 -> -> 170 `i `uc ]
+"32
+[; ;int_eeprom.c: 32:     WR = 1;
+[e = _WR -> -> 1 `i `b ]
+"33
+[; ;int_eeprom.c: 33:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
+"35
+[; ;int_eeprom.c: 35:     while(!EEIF);
+[e $U 1090  ]
+[e :U 1091 ]
+[e :U 1090 ]
+[e $ ! _EEIF 1091  ]
+[e :U 1092 ]
+"36
+[; ;int_eeprom.c: 36:     EEIF = 0;
+[e = _EEIF -> -> 0 `i `b ]
+"37
+[; ;int_eeprom.c: 37: }
+[e :UE 1089 ]
 }

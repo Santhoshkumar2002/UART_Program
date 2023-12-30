@@ -8,6 +8,10 @@
 #ifndef UART_H
 #define	UART_H
 
+unsigned char read_internal_eeprom(unsigned char addr);
+void write_internal_eeprom(unsigned char data, unsigned char addr);
+
+
 void init_uart();
 void putch(unsigned char data);
 void puts(char *data);

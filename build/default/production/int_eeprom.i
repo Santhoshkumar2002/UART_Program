@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "int_eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 10 "main.c"
+# 1 "int_eeprom.c" 2
+
+
+
+
+
+
+
+
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -17899,54 +17906,33 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 10 "main.c" 2
-
-# 1 "./uart.h" 1
-# 11 "./uart.h"
-unsigned char read_internal_eeprom(unsigned char addr);
-void write_internal_eeprom(unsigned char data, unsigned char addr);
+# 9 "int_eeprom.c" 2
 
 
-void init_uart();
-void putch(unsigned char data);
-void puts(char *data);
-unsigned char getch();
-unsigned char getche();
-# 11 "main.c" 2
+unsigned char read_internal_eeprom(unsigned char addr)
+{
+    EEADR = addr;
+    EEPGD = 0;
+    CFGS = 0;
+    WREN = 0;
+    RD = 1;
+    return EEDATA;
+}
 
+void write_internal_eeprom(unsigned char data, unsigned char addr)
+{
+    EEADR = addr;
+    EEDATA = data;
+    EEPGD = 0;
+    CFGS = 0;
+    WREN = 1;
 
-char text[] = "Finance Minister Arun Jaitley Tuesday hit out at former RBI governor Raghuram Rajan for predicting that the next banking crisis would be triggered by MSME lending, saying postmortem is easier than taking action when it was required. Rajan, who had as the chief economist at IMF warned of impending financial crisis of 2008, in a note to a parliamentary committee warned against ambitious credit targets and loan waivers, saying that they could be the sources of next banking crisis. Government should focus on sources of the next crisis, not just the last one.\n\r";
+    GIE = 0;
+    EECON2 = 0X55;
+    EECON2 = 0XAA;
+    WR = 1;
+    GIE = 1;
 
-void main(void) {
-    init_uart();
-
-    unsigned int start_time, end_time, time_taken;
-    unsigned long int total_bits_transmitted = 0;
-    unsigned char data;
-    for (int i = 0; i < 1000; ++i) {
-
-        write_internal_eeprom(text[i], 0x00+i);
-
-    }
-
-
-
-    for(int i = 0; i < 1000; i++)
-    {
-        data = read_internal_eeprom(0x00+i);
-        putch(data);
-        total_bits_transmitted += 8;
-    }
-
-
-
-
-
-    time_taken = end_time - start_time;
-
-
-    float speed_bps = (float)total_bits_transmitted / (float)time_taken * (8000000/ 1000000);
-
-    while(1);
-    return;
+    while(!EEIF);
+    EEIF = 0;
 }

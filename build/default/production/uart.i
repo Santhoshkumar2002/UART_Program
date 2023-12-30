@@ -17910,6 +17910,10 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 # 1 "./uart.h" 1
 # 11 "./uart.h"
+unsigned char read_internal_eeprom(unsigned char addr);
+void write_internal_eeprom(unsigned char data, unsigned char addr);
+
+
 void init_uart();
 void putch(unsigned char data);
 void puts(char *data);
